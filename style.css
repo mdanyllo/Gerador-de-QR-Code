@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --cor-primaria: #DDE6ED;
+    --cor-secundaria: #27374D;
+    --cor-terciaria: #526D82;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Prompt", sans-serif;
+}
+
+body{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--cor-primaria);
+}
+.container_pai{
+    display: flex;
+    flex-direction: column;
+    height: 260px;
+    max-width: 410px;
+    border-radius: 7px;
+    padding: 16px 25px;
+    transition: height 0.5s ease;
+}
+.container_pai.active{
+    height: 530px;
+}
+header h1{
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.7rem;
+    color: var(--cor-secundaria);
+}
+header p{
+    text-align: center;
+    font-weight: 400;
+    margin-top: 5px;
+    color: var(--cor-secundaria);
+    font-size: 1rem;
+}
+.container_pai .conteudo{
+    margin: 20px 0 25px;
+}
+.container_pai :where(input, button){
+    width: 100%;
+    height: 55px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.conteudo input{
+    font-size: 1rem;
+    padding: 0 17px;
+    border: 1px solid #999;
+}
+.conteudo button{
+    color:#fff;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    background: var(--cor-secundaria);
+    transition: all 0.3s;
+}
+
+.conteudo button:hover {
+    background-color: #182330;
+}
+
+.container_pai .qr-code{
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    padding: 10% 0;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+.container_pai .img{
+    width: 200px;
+    height: auto;
+}
+.container_pai.active .qr-code{
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 1s ease;
+}
+
+.rodape {
+    padding: 1% 50%;
+    bottom: 0;
+    position: fixed;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.p {
+    font-size: 90%;
+    color: var(--cor-terciaria);
+}
